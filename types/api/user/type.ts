@@ -7,4 +7,5 @@ export interface User {
   name: string;
   lastname: string;
   birth: string;
+  code: string;
 }

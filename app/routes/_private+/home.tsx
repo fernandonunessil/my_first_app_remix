@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router";
 
 import SideBarComponent from "~/components/Sidebar/Sidebar";
 import { json } from "@remix-run/node";
+import { User } from "types/api/user/type";
 
 export const loader = async () => {
   const users = await getAllUsers();
@@ -12,7 +13,7 @@ export const loader = async () => {
 };
 
 export default function home() {
-  const users = useLoaderData();
+  const users = useLoaderData() as User[];
   return (
     <div>
       <div>

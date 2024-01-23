@@ -4,8 +4,9 @@ import {
   type MetaFunction
 } from "@remix-run/node";
 
-import PrLogotype from "public/PH.png";
-import { authenticator } from "utils/auth.server";
+export const loader = async () => {
+  return redirect("/home");
+};
 
 export const meta: MetaFunction = () => {
   return [

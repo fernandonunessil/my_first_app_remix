@@ -1,8 +1,8 @@
-import { LoginParams } from "types/api/user/type";
+import { LoginParams, User } from "types/api/user/type";
 import { api } from "./api";
 
 export const getAllUsers = () => {
-  return new Promise((resolve, reject) => {
+  return new Promise<User[]>((resolve, reject) => {
     api
       .get("/getAllUsers")
       .then(({ data }) => {
