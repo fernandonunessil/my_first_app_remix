@@ -22,7 +22,7 @@ export default function index() {
   return (
     <div>
       <Header />
-      <main className="py-6 text-lg w-full text-center">
+      <main className="py-6 text-lg w-full text-center grid justify-center items-center h-screen">
         <h2 className="text-6xl">Bem-Vindos</h2>
         <p className="px-16 py-4 text-left">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
@@ -50,7 +50,7 @@ export default function index() {
           facilis. Quo facere neque, odit animi dolor facilis adipisci quibusdam
           molestiae incidunt autem!
         </p>
-        <NavLink to="/professionals"><div className="p-4 bg-dark_yellow w-1/2 mx-auto rounded hover:shadow-lg">Procurar Profissionais</div></NavLink>
+        <NavLink to="/professionals"><div className="p-4 bg-dark_yellow w-1/2 mx-auto rounded hover:shadow-lg my-8">Procurar Profissionais</div></NavLink>
       </main>
       <footer></footer>
     </div>
