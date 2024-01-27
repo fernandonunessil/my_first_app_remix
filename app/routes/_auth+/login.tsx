@@ -8,7 +8,7 @@ import { authenticator } from "utils/auth.server";
 
 export async function action({ request }: ActionFunctionArgs) {
   return await authenticator.authenticate("form", request, {
-    successRedirect: "/",
+    successRedirect: "/home",
     failureRedirect: "/login"
   });
 }
