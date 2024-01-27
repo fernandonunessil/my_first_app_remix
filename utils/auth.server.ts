@@ -14,14 +14,11 @@ const authenticator = new Authenticator<any>(sessionStorage, {
 });
 
 
-
 authenticator.use(
   new FormStrategy(async ({ form }) => {
     const email = form.get("email");
     const password = form.get("password");
     let user = await Login({ email: email, password: password });
-
-    console.log(user);
 
     return user.accessToken;
   }),
