@@ -1,5 +1,4 @@
 import type { LinksFunction } from "@remix-run/node";
-import { json } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -10,7 +9,6 @@ import {
 } from "@remix-run/react";
 
 import styles from "./tailwind.css";
-import { getAllUsers } from "api/user";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
