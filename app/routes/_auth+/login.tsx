@@ -7,10 +7,14 @@ import BasicButton from "~/components/buttons/basicButton";
 import { authenticator } from "utils/auth.server";
 
 export async function action({ request }: ActionFunctionArgs) {
-  return await authenticator.authenticate("form", request, {
-    successRedirect: "/home",
-    failureRedirect: "/login"
-  });
+  await authenticator
+    .authenticate("form", request)
+    .then((result) => {
+      return redirectWith
+    })
+    .catch((err) => {
+      return console.log("Erro");
+    });
 }
 
 export default function login() {
